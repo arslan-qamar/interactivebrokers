@@ -16,14 +16,15 @@ class TestApp(EWrapper, EClient):
 
 def main():
     app = TestApp()
-    app.connect("127.0.0.1", 7496, 0)
+    app.connect("127.0.0.1", 7497, 0)
     contract = Contract()
-    contract.symbol = "NIO"
-    contract.secType = "STK"
-    contract.exchange = "SMART"
+    contract = Contract()
+    contract.symbol = "EUR"
+    contract.secType = "CASH"
     contract.currency = "USD"
-    contract.primaryExchange = "NASDAQ"
-    app.reqMarketDataType(4) # switch to delayed-frozen data if live is not available
+    contract.exchange = "IDEALPRO"
+    #contract.primaryExchange = "NASDAQ"
+    app.reqMarketDataType(1) # switch to delayed-frozen data if live is not available
     app.reqMktData(1, contract, "", False, False, [])
     app.run()
 if __name__ == "__main__":

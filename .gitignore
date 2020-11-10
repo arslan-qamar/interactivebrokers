@@ -1,7 +1,8 @@
 # IbaPi Folder
 IbaPi/
-# Csv
+# Csv / jpg
 *.Csv
+*.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

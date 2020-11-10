@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "*.csv": true,
+        "*.jpg": true
+    }
+}
